@@ -5,12 +5,13 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 import { AuthModule } from './auth/auth.module';
 
+
 @Module({
   imports: [
     ConfigModule.forRoot(),
 
-    MongooseModule.forRoot( process.env.MONGO_URI, {
-      dbName : process.env.MONGO_DB_NAME,
+    MongooseModule.forRoot( 'mongodb://mongo:iDtMlXCHiMsKGYAhDetQpxymikesqBpX@autorack.proxy.rlwy.net:37276', {
+      dbName : 'auth-db',
     } ),
 
     AuthModule,

@@ -22,7 +22,7 @@ import { User, UserSchema } from './entities/user.entity';
 
     JwtModule.register({
       global: true,
-      secret: process.env.JWT_SEED,
+      secret: 'Esta_es_la_key_secret',
       signOptions: { expiresIn: '6h' },
     }),
 
